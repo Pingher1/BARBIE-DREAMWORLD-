@@ -1,0 +1,181 @@
+/* Google Fonts removed for offline capability */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* The Sovereign Brand Palette (Point #5) */
+    --barbie-pink: #E0218A;
+    /* Pantone 219C - The Core Power */
+    --digital-pink: #FF3EB5;
+    /* Screen Optimized - High Energy */
+    --soft-pink: #FF83D4;
+    /* Dreamworld Fade */
+    --gemini-gold: #FFD700;
+    /* The Royal Standard */
+    --sovereign-cyan: #00FFFF;
+    /* Magic Interactions */
+    --deep-navy: #1E3A8A;
+    /* Contrast & Depth */
+    --pure-white: #FFFFFF;
+    /* Studio Glare */
+
+    --font-royal: "Grand Hotel", cursive;
+    /* The Script */
+    --font-clean: "Montserrat", sans-serif;
+    /* The Structure */
+    --font-marker: "Amatic SC", cursive;
+    /* The Vlog Marker */
+    --font-hand: "Patrick Hand", cursive;
+    /* The Note */
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--color-barbie-pink);
+    color: white;
+    margin: 0;
+    overflow: hidden;
+    /* Prevent scrolling for app-like feel */
+}
+
+/* --- GOD MODE BUBBLES (The Breath of the Kingdom) --- */
+.soap-bubble {
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+    /* Floats above the background but below the UI */
+
+    /* THE MAGIC SHADER: Layering shadows to create 3D Glass & Oil */
+    box-shadow:
+        /* 1. The "Studio Glare" (Top Inner White Light) */
+        inset 0 40px 100px rgba(255, 255, 255, 0.9),
+        /* 2. The Oil Slick (Cyan/Purple/Gold Tints) */
+        inset 10px 0 40px #eaf5fc,
+        /* Blue Tint */
+        inset 80px 0 60px #f8dfff,
+        /* Purple Tint */
+        inset -20px -60px 60px #fdf4d6,
+        /* Gold Tint */
+        /* 3. The Outer Edge Glow */
+        0 0 15px rgba(255, 255, 255, 0.8);
+
+    /* The Glass Texture */
+    background: rgba(255, 255, 255, 0.05);
+    /* 5% opacity fill */
+    backdrop-filter: blur(3px);
+    /* Blurs the world behind it slightly */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Crisp edge */
+
+    /* The Physics Engines: "The Helium Cycle" */
+    /* REMOVED: Managed by MagicBubbles.tsx Physics Engine */
+    /* animation: heliumCycle ease-in-out infinite, wobble ease-in-out infinite; */
+}
+
+/* The "POP" Animation */
+.bubble-pop {
+    animation: pop 0.15s ease-out forwards;
+}
+
+@keyframes heliumCycle {
+    0% {
+        transform: translateY(110vh) scale(0.9);
+    }
+
+    40% {
+        transform: translateY(10vh) scale(1.1);
+    }
+
+    /* Rise High (Heat) */
+    60% {
+        transform: translateY(30vh) scale(1.0);
+    }
+
+    /* Cool Down (Sink) */
+    80% {
+        transform: translateY(15vh) scale(1.05);
+    }
+
+    /* Re-Heat (Rise) */
+    100% {
+        transform: translateY(-20vh) scale(1.1);
+    }
+
+    /* Escape */
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        margin-left: 0px;
+        transform: scale(1);
+    }
+
+    33% {
+        margin-left: 30px;
+        transform: scale(1.05, 0.95);
+    }
+
+    /* Squish Wide */
+    66% {
+        margin-left: -30px;
+        transform: scale(0.95, 1.05);
+    }
+
+    /* Squish Tall */
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 0.8;
+        border-width: 0px;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.font-script {
+    font-family: 'Grand Hotel', cursive;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+/* THE PRISM SCANNER GLOW */
+.prism-wand-core {
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 20%,
+            rgba(255, 215, 0, 1) 50%,
+            /* Gold Center */
+            rgba(255, 255, 255, 1) 80%,
+            rgba(255, 255, 255, 0) 100%);
+    box-shadow:
+        0 0 10px #ff00ff,
+        /* Pink Outer Glow */
+        0 0 20px #00ffff;
+    /* Cyan Outer Glow */
+}
