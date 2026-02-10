@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { GeminiStar } from '../ui/GeminiStar';
 
@@ -31,14 +31,12 @@ const Bubble = ({ index }: { index: number }) => {
 };
 
 export const ParticleEffects = () => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const springConfig = { damping: 25, stiffness: 120 };
     const mouseX = useSpring(useMotionValue(0), springConfig);
     const mouseY = useSpring(useMotionValue(0), springConfig);
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
             mouseX.set(e.clientX);
             mouseY.set(e.clientY);
         };
@@ -86,6 +84,6 @@ export const ParticleEffects = () => {
                 style={{ x: mouseX, y: mouseY, translateX: '-50%', translateY: '-50%' }}
             />
         </div>
-        </div >
+
     );
 };
