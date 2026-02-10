@@ -9,8 +9,8 @@ interface WelcomeScreenProps {
     onEnter: (name: string) => void;
 }
 
-import { useJoshuaGrid } from './useJoshuaGrid';
-import { LogicGrid } from '../../components/ui/LogicGrid';
+// import { useJoshuaGrid } from './useJoshuaGrid';
+// import { LogicGrid } from '../../components/ui/LogicGrid';
 import { MagicBubbles } from '../../components/MagicBubbles';
 import { DoorCrest } from './DoorCrest';
 import { PaintStrokeTitle } from '../../components/ui/PaintStrokeTitle';
@@ -26,7 +26,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onEnter }) => {
     const [inputValue, setInputValue] = useState('PRINCESS'); // Default placeholder
     const [isWiping, setIsWiping] = useState(false);
     const [isValidName, setIsValidName] = useState(false);
-    const { worldTree } = useJoshuaGrid();
+    // const { worldTree } = useJoshuaGrid();
 
     // Check for match whenever input changes
     React.useEffect(() => {
@@ -83,7 +83,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onEnter }) => {
             exit={{ opacity: 0, pointerEvents: 'none', transition: { delay: 1 } }} // Fade out container after doors open
         >
             {/* The Sovereign Wireframe: Logic Grid Background */}
-            <LogicGrid data={worldTree} className="z-0 opacity-40 mix-blend-screen" />
+            {/* <LogicGrid data={worldTree} className="z-0 opacity-40 mix-blend-screen" /> */}
 
             {/* Background Effects */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">
